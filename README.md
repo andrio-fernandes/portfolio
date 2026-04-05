@@ -1,4 +1,4 @@
-[# 🌐 Personal Portfolio Website
+Personal Portfolio Website
 
 A responsive personal portfolio website to showcase my projects, skills, and frontend development work.
 
