@@ -41,7 +41,7 @@ script.js
 
 ## 📫 Contact
 📧 Email: andriofernandes06@gmail.com  
-🔗 GitHub: https://github.com/your-username  
+🔗 GitHub: https://github.com/andrio-fernandes 
 
 ---
 
@@ -49,4 +49,4 @@ script.js
 - Add real project links  
 - Improve animations  
 - Enhance UI/UX  
-- Add more interactive features  ](https://andrio-fernandes.github.io/)
+- Add more interactive features
