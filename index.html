@@ -57,45 +57,47 @@
             <div class="skill glass">Bootstrap</div>
             <div class="skill glass">Git</div>
             <div class="skill glass">Responsive Design</div>
-            <div class="skill glass">Python</div>
         </div>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects">
         <h2>Projects</h2>
-        <div class="projects-grid">
 
-            <!-- <div class="card glass">
-                <h3>Portfolio</h3>
-                <p>Modern portfolio UI with glassmorphism design.</p>
-                <a href="#" class="project-link">View Project</a>
-            </div>
-
-            <div class="card glass">
-                <h3>Weather App</h3>
-                <p>API-based weather application.</p>
-                <a href="#" class="project-link">View Project</a>
-            </div>
-
-            <div class="card glass">
-                <h3>To-Do App</h3>
-                <p>Task manager using JavaScript.</p>
-                <a href="#" class="project-link">View Project</a>
-            </div> -->
-
+        <div class="glass box project-form-box">
+            <form id="projectForm">
+                <input type="text" id="title" placeholder="Project Title" required>
+                <input type="text" id="desc" placeholder="Description" required>
+                <input type="text" id="live" placeholder="Live Demo Link" required>
+                <input type="text" id="code" placeholder="GitHub Code Link" required>
+                <button type="submit">Add Project</button>
+            </form>
         </div>
+
+        <div class="projects-grid"></div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact">
         <div class="glass box">
             <h2>Contact</h2>
+            <form id="contactForm">
+
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Your Message"></textarea>
+
+                <button type="submit">Send</button>
+
+                <p id="formMsg"></p>
+
+            </form>
+
+            <br>
+            <br>
             <p>Email: andriofernandes06@gmail.com</p>
             <p>GitHub: https://github.com/andrio-fernandes</p>
         </div>
     </section>
-
     <!-- FOOTER -->
     <footer>
         <p>© 2026 Andrio Fernandes</p>
