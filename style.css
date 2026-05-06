@@ -20,8 +20,8 @@ body {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12px);
     border-radius: 15px;
-    border: 1px solid rgba(255,255,255,0.2);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 /* NAVBAR */
@@ -33,7 +33,7 @@ body {
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(10px);
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     z-index: 100;
 }
 
@@ -160,22 +160,15 @@ section h2 {
 .card {
     padding: 20px;
     border-radius: 12px;
+    margin-top: 34px;
+
 }
 
 .card:hover {
     transform: translateY(-10px) scale(1.03);
 }
 
-.project-link {
-    display: inline-block;
-    margin-top: 10px;
-    color: #ffd369;
-    text-decoration: none;
-}
 
-.project-link:hover {
-    text-decoration: underline;
-}
 
 /* CONTACT BOX */
 .box {
@@ -198,7 +191,7 @@ footer {
         position: absolute;
         right: 20px;
         top: 60px;
-        background: rgba(0,0,0,0.8);
+        background: rgba(0, 0, 0, 0.8);
         padding: 15px;
         border-radius: 10px;
     }
@@ -214,4 +207,141 @@ footer {
     .btn-group {
         flex-direction: column;
     }
+}
+
+/* CONTACT FORM */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Placeholder color */
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+    color: #ddd;
+}
+
+/* Focus effect */
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border: 1px solid #ffd369;
+    box-shadow: 0 0 8px rgba(255, 211, 105, 0.5);
+}
+
+/* Textarea size */
+#contactForm textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+/* Button */
+#contactForm button {
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    background: #ffd369;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Button hover */
+#contactForm button:hover {
+    transform: scale(1.05);
+    background: #ffcb47;
+}
+
+#formMsg {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffd369;
+}
+/* PROJECT SECTION SPACING */
+#projects {
+    margin-top: 40px;
+}
+
+/* FORM BOX */
+.project-form-box {
+    max-width: 500px;
+    margin: 20px auto 40px auto; /* top right bottom left */
+    padding: 25px;
+}
+
+/* FORM LAYOUT */
+#projectForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* INPUT STYLING */
+#projectForm input {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+#projectForm input::placeholder {
+    color: #ddd;
+}
+
+/* BUTTON */
+#projectForm button {
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: white;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#projectForm button:hover {
+    transform: scale(1.05);
+}
+
+/* PROJECT GRID SPACING */
+.projects-grid {
+    margin-top: 30px;
+}
+
+/* CONTACT SECTION SPACING */
+#contact .box {
+    max-width: 600px;
+    margin: auto;
+}
+
+.project-buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.pro-btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffd369;
+    text-decoration: none;
+}
+
+.pro-btn:hover {
+    text-decoration: underline;
 }
