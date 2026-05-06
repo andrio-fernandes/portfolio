@@ -5,7 +5,7 @@ A responsive personal portfolio website to showcase my projects, skills, and fro
 ---
 
 ## 🚀 Live Demo
-🔗 https://github.com/andrio-fernandes
+🔗https://andrio-fernandes.github.io/portfolio/
 
 ---
 
@@ -32,10 +32,12 @@ It features a modern glassmorphism UI and a fully responsive design.
 ---
 
 ## 📂 Project Structure
-index.html
-style.css
-script.js
-
+```
+quiz-app/
+│── index.html
+│── style.css
+│── script.js
+```
 
 ---
 
