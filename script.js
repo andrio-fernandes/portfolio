@@ -15,91 +15,60 @@ console.log("JS is running");
 // Base API URL
 const API = "https://portfolio-backend-qs1z.onrender.com";
 
-// ==========================
-// LOAD PROJECTS FROM BACKEND
-// ==========================
-fetch(`${API}/projects`)
-  .then(res => res.json())
-  .then(data => {
-    console.log("DATA:", data);
 
-    const container = document.querySelector(".projects-grid");
-
-    if (!container) {
-      console.error("Projects container not found");
-      return;
-    }
-
-    // Empty state
-    if (data.length === 0) {
-      container.innerHTML = "<p>No projects yet</p>";
-      return;
-    }
-
-    container.innerHTML = "";
-
-    data.forEach(p => {
-      const card = document.createElement("div");
-      card.classList.add("card", "glass");
-
-      card.innerHTML = `
-  <h3>${p.title}</h3>
-  <p>${p.desc}</p>
-
-  <div class="project-buttons">
-    <a href="${p.live}" target="_blank" class="pro-btn">Live Demo</a>
-<a href="${p.code}" target="_blank" class="pro-btn">View Code</a>
-  </div>
-`;
-      container.appendChild(card);
-    });
-  })
-  .catch(err => console.log("ERROR loading projects:", err));
 
 
 // ==========================
-// PROJECT FORM (ADD PROJECT)
+// PROJECTS DATA
 // ==========================
-const projectForm = document.getElementById("projectForm");
+const projects = [
+  {
+    title: "Quiz App",
+    desc: "Responsive quiz application with timer, score tracking, and dynamic question handling.",
+    live: "https://andrio-fernandes.github.io/quiz-app/",
+    code: "https://github.com/andrio-fernandes/quiz-app"
+  },
 
-if (projectForm) {
-  projectForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+  {
+    title: "Full Stack Portfolio",
+    desc: "Full-stack portfolio website with responsive UI, MongoDB integration, REST APIs, and deployed backend services.",
+    live: "https://andrio-fernandes.github.io/portfolio/",
+    code: "https://github.com/andrio-fernandes/portfolio"
+  },
+  {
+    title: "Wellness Reminder App",
+    desc: "Medication reminder app with notifications, email alerts, and adherence tracking.",
+    live: "https://wellness-reminder-andrio.lovable.app/",
+    code: "https://github.com/andrio-fernandes/Wellness-Reminder"
+  }
+];
 
-    const title = document.getElementById("title").value.trim();
-    const desc = document.getElementById("desc").value.trim();
-    const live = document.getElementById("live").value.trim();
-    const code = document.getElementById("code").value.trim();
+// ==========================
+// DISPLAY PROJECTS
+// ==========================
+const container = document.querySelector(".projects-grid");
 
-    // Validation
-    if (title.length < 3 || desc.length < 5) {
-      alert("Enter valid project details");
-      return;
-    }
+projects.forEach(p => {
+  const card = document.createElement("div");
 
-    if (!live || !code) {
-      alert("Add both Live Demo and Code links");
-      return;
-    }
+  card.classList.add("card", "glass");
 
-    const data = { title, desc, live, code };
+  card.innerHTML = `
+    <h3>${p.title}</h3>
+    <p>${p.desc}</p>
 
-    fetch(`${API}/projects`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-      .then(res => res.json())
-      .then(() => {
-        alert("Project added!");
-        projectForm.reset(); // better than reload
-        location.reload();  // optional, you can remove later
-      })
-      .catch(err => console.log("ERROR adding project:", err));
-  });
-}
+    <div class="project-buttons">
+      <a href="${p.live}" target="_blank" class="pro-btn">Live Demo</a>
+
+      <a href="${p.code}" target="_blank" class="pro-btn">
+        View Code
+      </a>
+    </div>
+  `;
+
+  container.appendChild(card);
+});
+
 // ==========================
 // CONTACT FORM SUBMISSION
 // ==========================
