@@ -15,12 +15,8 @@ console.log("JS is running");
 // Base API URL
 const API = "https://portfolio-backend-qs1z.onrender.com";
 
-
-
-
-// ==========================
 // PROJECTS DATA
-// ==========================
+
 const projects = [
   {
     title: "Quiz App",
@@ -40,12 +36,22 @@ const projects = [
     desc: "Medication reminder app with notifications, email alerts, and adherence tracking.",
     live: "https://wellness-reminder-andrio.lovable.app/",
     code: "https://github.com/andrio-fernandes/Wellness-Reminder"
-  }
+  },
+  {
+  title: "Task Management Application",
+  desc: "Full-stack task management app with JWT authentication, task CRUD operations, completion tracking, and dashboard statistics.",
+  live: "https://andrio-fernandes.github.io/Task-Management-Application/",
+  code: "https://github.com/andrio-fernandes/Task-Management-Application"
+},
+{
+  title: "Shoplex",
+  desc: "Full-stack e-commerce platform with user authentication, product browsing, search, shopping cart, and protected admin product management.",
+  live: "https://shoplex-plum.vercel.app/",
+  code: "https://github.com/andrio-fernandes/Shoplex"
+},
 ];
 
-// ==========================
-// DISPLAY PROJECTS
-// ==========================
+// DISPLAYS PROJECTS
 const container = document.querySelector(".projects-grid");
 
 projects.forEach(p => {
@@ -69,9 +75,7 @@ projects.forEach(p => {
   container.appendChild(card);
 });
 
-// ==========================
 // CONTACT FORM SUBMISSION
-// ==========================
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
