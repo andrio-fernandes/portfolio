@@ -49,6 +49,12 @@ const projects = [
   live: "https://shoplex-plum.vercel.app/",
   code: "https://github.com/andrio-fernandes/Shoplex"
 },
+{
+  title: "BlogHub",
+  desc: "Full-stack blog platform with JWT authentication, blog CRUD, comments, search, admin moderation, and responsive glassmorphism UI.",
+  live: "https://blog-hub-full-stack-blog-platform.vercel.app/",
+  code: "https://github.com/andrio-fernandes/BlogHub-Full-Stack-Blog-Platform",
+},  
 ];
 
 // DISPLAYS PROJECTS
